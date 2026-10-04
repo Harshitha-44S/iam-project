@@ -1,0 +1,88 @@
+{
+  "groups": {
+    "Developers": 2,
+    "DevOps": 2,
+    "Auditors": 2
+  },
+  "mfa": "enabled",
+  "instance_profile": "i-925d75d8163719975",
+  "results": [
+    {
+      "user": "developer1",
+      "action": "Upload object",
+      "expected": "Success",
+      "result": "Success",
+      "verdict": "PASS"
+    },
+    {
+      "user": "developer1",
+      "action": "Delete bucket",
+      "expected": "Access Denied",
+      "result": "Access Denied",
+      "verdict": "PASS"
+    },
+    {
+      "user": "auditor1",
+      "action": "Create EC2",
+      "expected": "Access Denied",
+      "result": "Access Denied",
+      "verdict": "PASS"
+    },
+    {
+      "user": "devops1",
+      "action": "Terminate EC2",
+      "expected": "Success",
+      "result": "Success",
+      "verdict": "PASS"
+    },
+    {
+      "user": "developer2",
+      "action": "Download object",
+      "expected": "Success",
+      "result": "Success",
+      "verdict": "PASS"
+    },
+    {
+      "user": "developer1",
+      "action": "Delete object",
+      "expected": "Access Denied",
+      "result": "Access Denied",
+      "verdict": "PASS"
+    },
+    {
+      "user": "developer2",
+      "action": "Create EC2",
+      "expected": "Access Denied",
+      "result": "Access Denied",
+      "verdict": "PASS"
+    },
+    {
+      "user": "devops2",
+      "action": "Create EC2",
+      "expected": "Success",
+      "result": "Success",
+      "verdict": "PASS"
+    },
+    {
+      "user": "devops1",
+      "action": "Delete bucket",
+      "expected": "Access Denied",
+      "result": "Access Denied",
+      "verdict": "PASS"
+    },
+    {
+      "user": "auditor2",
+      "action": "List S3 objects (read)",
+      "expected": "Success",
+      "result": "Success",
+      "verdict": "PASS"
+    },
+    {
+      "user": "auditor1",
+      "action": "Upload object (write)",
+      "expected": "Access Denied",
+      "result": "Access Denied",
+      "verdict": "PASS"
+    }
+  ]
+}
